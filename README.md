@@ -2,6 +2,7 @@
 ### Adapted from [madrona-labs](https://github.com/madrona-labs/voting)
 
 Voting on the Ethereum. 
+Using Web3.js 0.x (I would like to upgrade to Solidity 0.6 and Web3.js 1.0)
 
 ## Usage
 Deploy ```Voting.sol``` to Ethereum via [Remix](https://remix.ethereum.org/) or on a local private chain like [Ganache](https://www.trufflesuite.com/ganache)
