@@ -47,3 +47,6 @@ Make sure you use ```"``` instead of ```'``` and no spaces between the commas.
 Ideally I would like to have pure JS method (no smart contract) to convert strings to byte32[] or have strings be passed and converted within the contract. 
 
 Bytes are used instead of Strings to save on space which saves on gas costs. 
+
+## Future Improvements
+- Deploy new elections from the dapp
