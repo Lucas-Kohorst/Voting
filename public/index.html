@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Voting</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <h1 style="display: flex; justify-content: center; align-items: center;">Vote</h1>
+    <div class="table-responsive" style="padding: 2em;">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Candidate</th>
+                    <th>Votes</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+    </div>
+    <form id="vote-form" style="display: flex; justify-content: center; align-items: center;">
+        <select id="candidate-options" name="candidate" style="margin: 2em; font-size: 1.25em;"></select>
+        <button type="submit" class="btn btn-primary" style="font-size: 1.25em;">Vote</button>
+    </form>
+
+    <script src="contract.js"></script>
+</body>
+
+</html>
