@@ -7,7 +7,7 @@ app.get("/", function(request, response) {
     response.sendFile("index.html", { root: __dirname });
 });
 
-var PORT = 3000;
+var PORT = process.env.PORT || 8080;
 
 app.listen(PORT, function() {
     console.log("Running on http://127.0.0.1:" + PORT);
