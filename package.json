@@ -11,6 +11,12 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "web3": "^1.2.4"
+        "express": "^4.17.1",
+        "fs": "0.0.1-security",
+        "solc": "^0.4.10",
+        "web3": "0.20.6"
+    },
+    "engines": {
+        "node": "12.x"
     }
 }

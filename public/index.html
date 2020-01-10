@@ -13,10 +13,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <script src="abi.js" type="module"></script>
 </head>
 
 <body>
-    <h1 style="display: flex; justify-content: center; align-items: center;">Vote</h1>
+    <h1 style="display: flex; justify-content: center; align-items: center;">Etheruem Voting Application</h1>
     <div class="table-responsive" style="padding: 2em;">
         <table class="table table-bordered">
             <thead>
@@ -29,10 +30,40 @@
             </tbody>
         </table>
     </div>
+
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h3>Vote for a Candidate</h3>
+    </div>
     <form id="vote-form" style="display: flex; justify-content: center; align-items: center;">
         <select id="candidate-options" name="candidate" style="margin: 2em; font-size: 1.25em;"></select>
         <button type="submit" class="btn btn-primary" style="font-size: 1.25em;">Vote</button>
     </form>
+
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h3>Input Contract Address to Vote</h3>
+    </div>
+    <form id="contract-input-form" style="display: flex; justify-content: center; align-items: center;">
+        <input type="text" id="contract-input-addr" name="addr" style="margin: 2em; font-size: 1.25em;" placeholder="0xb102e2e34098fc7cd7493d439563482729bd8234">
+        <button type="button" class="btn btn-primary" id="contract-input-btn" style="font-size: 1.25em;">Contract</button>
+    </form>
+
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h3>Create a new Poll</h3>
+        <h4>Input candidates comma separated</h4>
+    </div>
+    <form id="new-contract-input-form" style="display: flex; justify-content: center; align-items: center;">
+        <input type="text" id="input-candidates" name="candidates" style="margin: 2em; font-size: 1.25em;" placeholder="Ethan, Hector, Sergio">
+        <button type="button" class="btn btn-primary" id="create-contract-input-btn" style="font-size: 1.25em;">Create</button>
+    </form>
+
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <p id="tx-hash"></p>
+        <p id="contract-hash"></p>
+    </div>
+
+    <div style="position: fixed; bottom: 0; right: 0; margin: 2em;">
+        <h5>Code available at <a href="https://github.com/Lucas-Kohorst/Voting">Github</a></h5>
+    </div>
 
     <script src="contract.js"></script>
 </body>
