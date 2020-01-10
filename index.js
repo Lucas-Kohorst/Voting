@@ -24,22 +24,15 @@ app.get('/contract', function(req, res) {
     let bytecode = compiledContract.contracts[':Voting'].bytecode;
     let gasEstimate = web3.eth.estimateGas({ data: '0x' + bytecode });
 
-    const candidates = ["Rama", "Nick", "Jose"];
-    const asciiToHex = web3.fromAscii;
-    const votingHex = candidates.map(value => {
-        return asciiToHex(value);
-    });
-
     res.json({
         abi: abi,
         gasEstimate: gasEstimate,
         bytecode: bytecode,
-        votingHex: votingHex
     });
 
 })
 
-var PORT = 3000;
+var PORT = process.env.PORT || 8080;
 
 app.listen(PORT, function() {
     console.log("Running on http://127.0.0.1:" + PORT);

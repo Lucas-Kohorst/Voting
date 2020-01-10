@@ -4,6 +4,11 @@
 Voting on the Ethereum. 
 Using Web3.js 0.x (I would like to upgrade to Solidity 0.6 and Web3.js 1.0)
 
+### Features
+- Vote for Candidates
+- Load a new Poll via Smart Contract Address
+- Create a new Poll
+
 ## Usage
 Deploy ```Voting.sol``` to Ethereum via [Remix](https://remix.ethereum.org/) or on a local private chain like [Ganache](https://www.trufflesuite.com/ganache)
 
@@ -16,7 +21,11 @@ Build and Run!
 npm i && npm start
 ```
 
-## Creating your own Election
+## Deploying the contract with Remix
+You can create your own contracts within the dApp by entering who you want in the election and pressing "Create" the transaction hash and contract hash will be outputted so that you can use them
+
+However if you want to deploy the ```Voting.sol``` contract in remix yourself follow these steps
+
 When you are deploying the ```Voting.sol``` smart contract you will have to enter the candidates in a bytes32 array. [Here](https://ethereum.stackexchange.com/questions/50310/how-to-pass-the-value-in-bytes32-array) is a helpful answer on how to incorporate the translation in a smart contract (possible future improvement). You can hardcode the values you want to translate. After deploying and running the contract inspect the output. You should see something like this
 
 ```
@@ -42,12 +51,4 @@ Copy the decoded output and format it so it looks like
 
 **this byte32[] is "Ethan", "Hector", "Sergio"**
 
-Make sure you use ```"``` instead of ```'``` and no spaces between the commas. 
-
-Ideally I would like to have pure JS method (no smart contract) to convert strings to byte32[] or have strings be passed and converted within the contract. 
-
-Bytes are used instead of Strings to save on space which saves on gas costs. Pw
-Bytes are used instead of Strings to save on space which saves on gas costs. 
-
-## Future Improvements
-- Deploy new elections from the dapp
+Bytes are used instead of Strings to save on space which saves on gas costs
