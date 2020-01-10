@@ -52,3 +52,6 @@ Copy the decoded output and format it so it looks like
 **this byte32[] is "Ethan", "Hector", "Sergio"**
 
 Bytes are used instead of Strings to save on space which saves on gas costs
+
+### Resources
+[github.com/ethereum/wiki/wiki/JavaScript-API#web3ethcontract](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethcontract)
